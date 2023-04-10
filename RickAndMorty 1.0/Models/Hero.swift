@@ -1,6 +1,6 @@
 import UIKit
 
-struct Character: Codable {
+struct Hero: Codable {
     let id: Int
     let name: String
     let status: String

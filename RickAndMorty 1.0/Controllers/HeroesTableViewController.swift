@@ -1,17 +1,9 @@
-//
-//  CharactersTableViewController.swift
-//  RickAndMorty 1.0
-//
-//  Created by Miloshevich on 03.04.2023.
-//
-
 import UIKit
 
-class CharactersTableViewController: UITableViewController {
+class HeroesTableViewController: UITableViewController {
 
+    var characters = []
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

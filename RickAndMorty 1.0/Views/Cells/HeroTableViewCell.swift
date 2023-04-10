@@ -1,6 +1,6 @@
 import UIKit
 
-class CharacterTableViewCell: UITableViewCell {
+class HeroTableViewCell: UITableViewCell {
 
 	@IBOutlet var nameLabel: UILabel!
 	@IBOutlet var statusLabel: UILabel!

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharacterDetailTableViewController: UITableViewController {
+class HeroDetailTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
