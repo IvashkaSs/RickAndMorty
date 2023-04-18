@@ -2,9 +2,12 @@ import UIKit
 
 class HeroTableViewCell: UITableViewCell {
 
-	@IBOutlet var nameLabel: UILabel!
+   
+    @IBOutlet var heroImageView: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
 	@IBOutlet var statusLabel: UILabel!
-	
+    @IBOutlet var statusView: UIView!
+    
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -16,4 +19,10 @@ class HeroTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    
+    func update(with hero: Hero) {
+        nameLabel.text = hero.name
+        statusLabel.text = hero.status
+        statusView.layer.cornerRadius = 4.0
+    }
 }

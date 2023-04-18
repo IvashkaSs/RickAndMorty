@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5201947C29DC15D6001B1686 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201947B29DC15D6001B1686 /* Hero.swift */; };
 		520E9D2929E2DA6200B1D76F /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E9D2829E2DA6200B1D76F /* EpisodeDetailViewController.swift */; };
+		524680E129E83DCE00E18151 /* HeroesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524680E029E83DCE00E18151 /* HeroesResponse.swift */; };
 		529DD0FD29E334050016EAE2 /* ObjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DD0FC29E334050016EAE2 /* ObjectResponse.swift */; };
 		52A34FCD29DB481E00A424D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A34FCC29DB481E00A424D2 /* AppDelegate.swift */; };
 		52A34FCF29DB481E00A424D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A34FCE29DB481E00A424D2 /* SceneDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		5201947B29DC15D6001B1686 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		520E9D2829E2DA6200B1D76F /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
+		524680E029E83DCE00E18151 /* HeroesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesResponse.swift; sourceTree = "<group>"; };
 		529DD0FC29E334050016EAE2 /* ObjectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectResponse.swift; sourceTree = "<group>"; };
 		52A34FC929DB481E00A424D2 /* RickAndMorty 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RickAndMorty 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A34FCC29DB481E00A424D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				529DD0FC29E334050016EAE2 /* ObjectResponse.swift */,
+				524680E029E83DCE00E18151 /* HeroesResponse.swift */,
 			);
 			path = ResponseModels;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				52EEC92B29E3E57300A3DA33 /* HeroTableViewCell.swift in Sources */,
 				52A34FE329DB507D00A424D2 /* LocationsTableViewController.swift in Sources */,
 				520E9D2929E2DA6200B1D76F /* EpisodeDetailViewController.swift in Sources */,
+				524680E129E83DCE00E18151 /* HeroesResponse.swift in Sources */,
 				52F021CA29DC8F8F006CF7C8 /* Episode.swift in Sources */,
 				52F021C829DC8F77006CF7C8 /* Location.swift in Sources */,
 				52A34FE529DB509C00A424D2 /* EpisodesTableViewController.swift in Sources */,
