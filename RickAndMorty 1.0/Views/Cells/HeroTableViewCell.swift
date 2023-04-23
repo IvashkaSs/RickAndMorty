@@ -23,6 +23,6 @@ class HeroTableViewCell: UITableViewCell {
     func update(with hero: Hero) {
         nameLabel.text = hero.name
         statusLabel.text = hero.status
-        statusView.layer.cornerRadius = 4.0
+        statusView.layer.cornerRadius = statusView.frame.height / 2
     }
 }

@@ -50,23 +50,22 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q9Y-PX-nZT">
-                                            <rect key="frame" x="157.33333333333337" y="19" width="199.66666666666663" height="102"/>
+                                            <rect key="frame" x="157.33333333333337" y="11" width="199.66666666666663" height="118"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angry Glorzo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvn-pH-ZQx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="15.666666666666666"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Angry Glorzo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvn-pH-ZQx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Rk7-wM-8pS">
-                                                    <rect key="frame" x="0.0" y="23.666666666666664" width="75" height="8"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Rk7-wM-8pS">
+                                                    <rect key="frame" x="0.0" y="32" width="79.333333333333329" height="15.666666666666664"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zai-yw-TRs">
-                                                            <rect key="frame" x="0.0" y="0.0" width="8" height="8"/>
+                                                            <rect key="frame" x="0.0" y="1.6666666666666643" width="12.333333333333334" height="12.333333333333334"/>
                                                             <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Zai-yw-TRs" secondAttribute="height" multiplier="1:1" id="82d-gT-BjU"/>
-                                                                <constraint firstAttribute="height" constant="8" id="Qu4-wa-sXA"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -75,15 +74,18 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Dead-Alien" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2g-lv-5Be">
-                                                            <rect key="frame" x="12" y="0.0" width="63" height="8"/>
+                                                            <rect key="frame" x="16.333333333333314" y="0.0" width="63" height="15.666666666666666"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Zai-yw-TRs" firstAttribute="height" secondItem="z2g-lv-5Be" secondAttribute="height" multiplier="0.8" id="atC-fX-D84"/>
+                                                    </constraints>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="fcP-gi-VR6">
-                                                    <rect key="frame" x="0.0" y="39.666666666666664" width="110.66666666666667" height="27.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="55.666666666666664" width="110.66666666666667" height="27.666666666666664"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" text="Last known location: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1R9-OP-FEY">
                                                             <rect key="frame" x="0.0" y="0.0" width="110.66666666666667" height="13.333333333333334"/>
@@ -92,15 +94,15 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Glorzo Asteroid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjt-R4-gZo">
-                                                            <rect key="frame" x="0.0" y="13.333333333333336" width="87.666666666666671" height="14.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="13.333333333333329" width="87.666666666666671" height="14.333333333333336"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ebw-28-5dV">
-                                                    <rect key="frame" x="0.0" y="75.333333333333329" width="67.333333333333329" height="26.666666666666671"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ebw-28-5dV">
+                                                    <rect key="frame" x="0.0" y="91.333333333333329" width="67.333333333333329" height="26.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="First seen in:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-tu-sLE">
                                                             <rect key="frame" x="0.0" y="0.0" width="67.333333333333329" height="13.333333333333334"/>
@@ -120,13 +122,13 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Q9Y-PX-nZT" firstAttribute="top" secondItem="26R-8L-tOb" secondAttribute="topMargin" constant="8" id="U0v-Gw-bkc"/>
+                                        <constraint firstItem="Q9Y-PX-nZT" firstAttribute="top" secondItem="26R-8L-tOb" secondAttribute="topMargin" id="U0v-Gw-bkc"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Q9Y-PX-nZT" secondAttribute="trailing" constant="16" id="UFx-7v-SKs"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Bdz-ic-x4U" secondAttribute="bottom" constant="8" id="UKJ-Rm-pDR"/>
                                         <constraint firstItem="Bdz-ic-x4U" firstAttribute="leading" secondItem="26R-8L-tOb" secondAttribute="leading" constant="8" id="UWx-5g-b2Y"/>
                                         <constraint firstItem="Bdz-ic-x4U" firstAttribute="top" relation="greaterThanOrEqual" secondItem="26R-8L-tOb" secondAttribute="top" constant="8" id="WLF-4T-Xbz"/>
                                         <constraint firstItem="Bdz-ic-x4U" firstAttribute="centerY" secondItem="26R-8L-tOb" secondAttribute="centerY" id="i5R-3r-953"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Q9Y-PX-nZT" secondAttribute="bottom" constant="8" id="pn8-DB-sU3"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Q9Y-PX-nZT" secondAttribute="bottom" id="mkS-Yn-Yel"/>
                                         <constraint firstItem="Q9Y-PX-nZT" firstAttribute="width" secondItem="Bdz-ic-x4U" secondAttribute="width" multiplier="1.5" id="wPT-mt-3Qj"/>
                                         <constraint firstItem="Q9Y-PX-nZT" firstAttribute="leading" secondItem="Bdz-ic-x4U" secondAttribute="trailing" constant="16" id="ydL-vt-cIo"/>
                                     </constraints>
@@ -163,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n86-jN-61G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3329" y="-356"/>
+            <point key="canvasLocation" x="3073" y="-356"/>
         </scene>
         <!--Locations Table View Controller-->
         <scene sceneID="vcX-mV-OTT">

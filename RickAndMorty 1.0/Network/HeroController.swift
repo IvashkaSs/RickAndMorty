@@ -2,10 +2,12 @@ import UIKit
 
 class HeroController {
     static let shared = HeroController()
+    static let imageCache = NSCache<AnyObject, AnyObject>()
+    
     
     let baseURL = URL(string: "https://rickandmortyapi.com/api")!
     
-    func fetchCharacters(queryItems: [String: String]? = nil, completion: @escaping (Result<HeroResponse, Error>) -> Void) {
+    func fetchHeroes(queryItems: [String: String]? = nil, completion: @escaping (Result<HeroResponse, Error>) -> Void) {
         let baseCharactersURL = baseURL.appendingPathComponent("character")
         var components = URLComponents(url: baseCharactersURL, resolvingAgainstBaseURL: true)!
         
@@ -24,9 +26,11 @@ class HeroController {
                     
                     completion(.success(heroResponse))
                 } catch {
+                    print(error)
                     completion(.failure(error))
                 }
             } else if let error = error {
+                print(error)
                 completion(.failure(error))
             }
         }
@@ -35,8 +39,14 @@ class HeroController {
     }
     
     func fetchImage(url: URL, completion: @escaping(UIImage?) -> Void) {
+        if let imageFromCache = HeroController.imageCache.object(forKey: url as AnyObject) as? UIImage {
+            completion(imageFromCache)
+            return
+        }
+       
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data, let image = UIImage(data: data) {
+                HeroController.imageCache.setObject(image, forKey: url as AnyObject)
                 completion(image)
             } else {
                 completion(nil)
