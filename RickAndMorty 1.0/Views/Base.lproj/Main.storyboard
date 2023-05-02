@@ -146,26 +146,93 @@
                             <outlet property="delegate" destination="unk-fE-jUS" id="TD7-IG-gxE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="E3B-Om-kFY"/>
+                    <navigationItem key="navigationItem" id="E3B-Om-kFY">
+                        <barButtonItem key="rightBarButtonItem" image="line.3.horizontal.decrease.circle" catalog="system" id="Wdp-Ju-bAd">
+                            <connections>
+                                <segue destination="FsG-Sh-yxK" kind="presentation" id="dWf-bZ-zZh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eo0-qT-hzg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2202.290076335878" y="-355.63380281690144"/>
         </scene>
-        <!--Hero Detail Table View Controller-->
-        <scene sceneID="L8r-aA-lH2">
+        <!--Filters Table View Controller-->
+        <scene sceneID="tOQ-Vy-la5">
             <objects>
-                <viewController id="HfL-Wz-O7H" customClass="HeroDetailTableViewController" customModule="RickAndMorty_1_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AwV-s9-x3p">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <tableViewController id="iV6-uV-sZB" customClass="FiltersTableViewController" customModule="RickAndMorty_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="wfW-fZ-DSF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="la0-cy-Gno"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n86-jN-61G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textFieldCell" id="wjW-pw-Nh5" customClass="TextFieldFilterTableViewCell" customModule="RickAndMorty_1_0" customModuleProvider="target">
+                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="44.333332061767578"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wjW-pw-Nh5" id="Esj-No-1bF">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="44.333332061767578"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter species name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4Y-XR-JEs">
+                                            <rect key="frame" x="16" y="0.0" width="321" height="44.333333333333336"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="EPS-6w-Jsa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            <connections>
+                                                <action selector="textFieldEditingChanged:" destination="wjW-pw-Nh5" eventType="editingChanged" id="IPs-ZB-9aR"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="v4Y-XR-JEs" secondAttribute="trailing" constant="16" id="Bhg-WT-wUs"/>
+                                        <constraint firstAttribute="bottom" secondItem="v4Y-XR-JEs" secondAttribute="bottom" id="ZA3-6q-1YW"/>
+                                        <constraint firstItem="v4Y-XR-JEs" firstAttribute="leading" secondItem="Esj-No-1bF" secondAttribute="leading" constant="16" id="ivq-e5-xxv"/>
+                                        <constraint firstItem="v4Y-XR-JEs" firstAttribute="top" secondItem="Esj-No-1bF" secondAttribute="top" id="smT-9t-b9I"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="textField" destination="v4Y-XR-JEs" id="BlI-e5-X0c"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="defaultCell" textLabel="7pf-Vf-qPx" style="IBUITableViewCellStyleDefault" id="Otm-Bh-06v" customClass="TextFieldFilterTableViewCell" customModule="RickAndMorty_1_0" customModuleProvider="target">
+                                <rect key="frame" x="20" y="99.666664123535156" width="353" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Otm-Bh-06v" id="Y3h-dM-NaH">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7pf-Vf-qPx">
+                                            <rect key="frame" x="20" y="0.0" width="313" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="iV6-uV-sZB" id="99q-FF-zGS"/>
+                            <outlet property="delegate" destination="iV6-uV-sZB" id="jVP-lI-JmK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="vps-Yg-LlI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fBE-Or-jzO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="QVU-78-ycj">
+                            <connections>
+                                <segue destination="gnd-Hv-IEW" kind="unwind" identifier="applyFiltersSegue" unwindAction="unwindToHeroTableViewControllerWithSegue:" id="HIb-nM-MWX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8e-Jw-RbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="gnd-Hv-IEW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3073" y="-356"/>
+            <point key="canvasLocation" x="4043.5114503816794" y="-356.33802816901408"/>
         </scene>
         <!--Locations Table View Controller-->
         <scene sceneID="vcX-mV-OTT">
@@ -312,8 +379,27 @@
             </objects>
             <point key="canvasLocation" x="3329" y="1242"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vlo-hr-nSI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FsG-Sh-yxK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T0z-FF-Mdg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iV6-uV-sZB" kind="relationship" relationship="rootViewController" destinationCreationSelector="showFilters:" id="6VM-V1-BRk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLU-55-h8r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3116.7938931297708" y="-356.33802816901408"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

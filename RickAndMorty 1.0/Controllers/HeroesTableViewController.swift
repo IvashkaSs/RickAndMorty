@@ -5,6 +5,8 @@ class HeroesTableViewController: UITableViewController {
     var totalPages = 1
     var heroes = [Hero]()
     
+    var filters: [String: String]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +24,14 @@ class HeroesTableViewController: UITableViewController {
         DispatchQueue.main.async {
             self.totalPages = heroResponse.info.pages
             self.heroes += heroResponse.results
+            self.tableView.reloadData()
+        }
+    }
+    
+    func reloadUI(with heroResponse: HeroResponse) {
+        DispatchQueue.main.async {
+            self.totalPages = heroResponse.info.pages
+            self.heroes = heroResponse.results
             self.tableView.reloadData()
         }
     }
@@ -44,9 +54,9 @@ class HeroesTableViewController: UITableViewController {
         else { return UITableViewCell() }
         
         let hero = heroes[indexPath.row]
-       
+        
         cell.update(with: hero)
-       
+        
         HeroController.shared.fetchImage(url: hero.imageURL) { (image) in
             DispatchQueue.main.async {
                 if let image = image {
@@ -57,17 +67,43 @@ class HeroesTableViewController: UITableViewController {
         
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if currentPage < totalPages && indexPath.row == heroes.count - 1 {
             currentPage += 1
-          
-            HeroController.shared.fetchHeroes(queryItems: ["page": "\(currentPage)"]) { (result) in
+                
+            var queryItems = ["page": "\(currentPage)"]
+            if let filters = filters {
+                filters.forEach { (key, value) in
+                    queryItems[key] = value
+                }
+            }
+            
+            HeroController.shared.fetchHeroes(queryItems: queryItems) { (result) in
                 switch result {
                 case .success(let heroResponse):
                     self.updateUI(with: heroResponse)
                 case .failure(let error):
                     self.displayError(error, title: "Failed to Fetch New Heroes")
+                }
+            }
+        }
+    }
+        
+    @IBSegueAction func showFilters(_ coder: NSCoder) -> FiltersTableViewController? {
+        return FiltersTableViewController(coder: coder, filters: filters)
+    }
+    
+    @IBAction func unwindToHeroTableViewController (segue: UIStoryboardSegue) {
+        if segue.identifier == "applyFiltersSegue", let filters = filters {
+            HeroController.shared.fetchHeroes(queryItems: filters) { (result) in
+                switch result {
+                case .success(let heroResponse):
+                    self.heroes = []
+                    self.filters = filters
+                    self.updateUI(with: heroResponse)
+                case .failure(let error):
+                    self.displayError(error, title: "Failed to Filter Heroes")
                 }
             }
         }

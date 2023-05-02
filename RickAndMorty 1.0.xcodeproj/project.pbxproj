@@ -10,6 +10,7 @@
 		5201947C29DC15D6001B1686 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201947B29DC15D6001B1686 /* Hero.swift */; };
 		520E9D2929E2DA6200B1D76F /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E9D2829E2DA6200B1D76F /* EpisodeDetailViewController.swift */; };
 		524680E129E83DCE00E18151 /* HeroesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524680E029E83DCE00E18151 /* HeroesResponse.swift */; };
+		529AC21F29FAB17D008D900B /* TextFieldFilterTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AC21E29FAB17D008D900B /* TextFieldFilterTableViewCellDelegate.swift */; };
 		529DD0FD29E334050016EAE2 /* ObjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DD0FC29E334050016EAE2 /* ObjectResponse.swift */; };
 		52A34FCD29DB481E00A424D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A34FCC29DB481E00A424D2 /* AppDelegate.swift */; };
 		52A34FCF29DB481E00A424D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A34FCE29DB481E00A424D2 /* SceneDelegate.swift */; };
@@ -21,6 +22,9 @@
 		52A34FE529DB509C00A424D2 /* EpisodesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A34FE429DB509C00A424D2 /* EpisodesTableViewController.swift */; };
 		52A34FE729DB50D800A424D2 /* HeroDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A34FE629DB50D800A424D2 /* HeroDetailTableViewController.swift */; };
 		52A34FE929DB510700A424D2 /* LocationDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A34FE829DB510700A424D2 /* LocationDetailTableViewController.swift */; };
+		52BB9E7629F80AE400DCEE49 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9E7529F80AE400DCEE49 /* Filters.swift */; };
+		52BB9E7829F80D7500DCEE49 /* TextFieldFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9E7729F80D7500DCEE49 /* TextFieldFilterTableViewCell.swift */; };
+		52BB9E7A29F80E0200DCEE49 /* FiltersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9E7929F80E0200DCEE49 /* FiltersTableViewController.swift */; };
 		52C7C57C29DBCC9A00FEE2FF /* HeroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7C57B29DBCC9A00FEE2FF /* HeroController.swift */; };
 		52EEC92B29E3E57300A3DA33 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EEC92A29E3E57300A3DA33 /* HeroTableViewCell.swift */; };
 		52F021C829DC8F77006CF7C8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F021C729DC8F77006CF7C8 /* Location.swift */; };
@@ -31,6 +35,7 @@
 		5201947B29DC15D6001B1686 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		520E9D2829E2DA6200B1D76F /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
 		524680E029E83DCE00E18151 /* HeroesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesResponse.swift; sourceTree = "<group>"; };
+		529AC21E29FAB17D008D900B /* TextFieldFilterTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFilterTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		529DD0FC29E334050016EAE2 /* ObjectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectResponse.swift; sourceTree = "<group>"; };
 		52A34FC929DB481E00A424D2 /* RickAndMorty 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RickAndMorty 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A34FCC29DB481E00A424D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +49,9 @@
 		52A34FE429DB509C00A424D2 /* EpisodesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewController.swift; sourceTree = "<group>"; };
 		52A34FE629DB50D800A424D2 /* HeroDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailTableViewController.swift; sourceTree = "<group>"; };
 		52A34FE829DB510700A424D2 /* LocationDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailTableViewController.swift; sourceTree = "<group>"; };
+		52BB9E7529F80AE400DCEE49 /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
+		52BB9E7729F80D7500DCEE49 /* TextFieldFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFilterTableViewCell.swift; sourceTree = "<group>"; };
+		52BB9E7929F80E0200DCEE49 /* FiltersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersTableViewController.swift; sourceTree = "<group>"; };
 		52C7C57B29DBCC9A00FEE2FF /* HeroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroController.swift; sourceTree = "<group>"; };
 		52EEC92A29E3E57300A3DA33 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
 		52F021C729DC8F77006CF7C8 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -75,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				52A34FE029DB505500A424D2 /* HeroesTableViewController.swift */,
+				52BB9E7929F80E0200DCEE49 /* FiltersTableViewController.swift */,
 				52A34FE229DB507D00A424D2 /* LocationsTableViewController.swift */,
 				52A34FE429DB509C00A424D2 /* EpisodesTableViewController.swift */,
 				5201947F29DC162B001B1686 /* DetaiControllers */,
@@ -105,8 +114,26 @@
 			isa = PBXGroup;
 			children = (
 				52EEC92A29E3E57300A3DA33 /* HeroTableViewCell.swift */,
+				52BB9E7729F80D7500DCEE49 /* TextFieldFilterTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		529AC22029FAB196008D900B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				529AC22129FAB1C5008D900B /* Protocols */,
+				5201948029DC1674001B1686 /* Network */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		529AC22129FAB1C5008D900B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				529AC21E29FAB17D008D900B /* TextFieldFilterTableViewCellDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		529DD0FE29E336850016EAE2 /* ResponseModels */ = {
@@ -142,7 +169,7 @@
 				5201947D29DC15E8001B1686 /* Models */,
 				52EEC92C29E3E57A00A3DA33 /* Views */,
 				5201947E29DC15F7001B1686 /* Controllers */,
-				5201948029DC1674001B1686 /* Network */,
+				529AC22029FAB196008D900B /* Service */,
 				52A34FD529DB481F00A424D2 /* Assets.xcassets */,
 				52A34FDA29DB482000A424D2 /* Info.plist */,
 			);
@@ -154,6 +181,7 @@
 			children = (
 				52A34FD729DB482000A424D2 /* LaunchScreen.storyboard */,
 				52A34FD229DB481E00A424D2 /* Main.storyboard */,
+				52BB9E7529F80AE400DCEE49 /* Filters.swift */,
 				5233906C29E3EC610002B2FB /* Cells */,
 			);
 			path = Views;
@@ -231,11 +259,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				529DD0FD29E334050016EAE2 /* ObjectResponse.swift in Sources */,
+				52BB9E7629F80AE400DCEE49 /* Filters.swift in Sources */,
+				52BB9E7A29F80E0200DCEE49 /* FiltersTableViewController.swift in Sources */,
 				52EEC92B29E3E57300A3DA33 /* HeroTableViewCell.swift in Sources */,
+				52BB9E7829F80D7500DCEE49 /* TextFieldFilterTableViewCell.swift in Sources */,
 				52A34FE329DB507D00A424D2 /* LocationsTableViewController.swift in Sources */,
 				520E9D2929E2DA6200B1D76F /* EpisodeDetailViewController.swift in Sources */,
 				524680E129E83DCE00E18151 /* HeroesResponse.swift in Sources */,
 				52F021CA29DC8F8F006CF7C8 /* Episode.swift in Sources */,
+				529AC21F29FAB17D008D900B /* TextFieldFilterTableViewCellDelegate.swift in Sources */,
 				52F021C829DC8F77006CF7C8 /* Location.swift in Sources */,
 				52A34FE529DB509C00A424D2 /* EpisodesTableViewController.swift in Sources */,
 				52A34FCD29DB481E00A424D2 /* AppDelegate.swift in Sources */,
