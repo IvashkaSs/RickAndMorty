@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-671" y="435"/>
         </scene>
-        <!--Heroes Table View Controller-->
+        <!--Heroes-->
         <scene sceneID="5xz-h4-ZCL">
             <objects>
                 <tableViewController id="unk-fE-jUS" customClass="HeroesTableViewController" customModule="RickAndMorty_1_0" customModuleProvider="target" sceneMemberID="viewController">
@@ -146,7 +146,7 @@
                             <outlet property="delegate" destination="unk-fE-jUS" id="TD7-IG-gxE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="E3B-Om-kFY">
+                    <navigationItem key="navigationItem" title="Heroes" id="E3B-Om-kFY">
                         <barButtonItem key="rightBarButtonItem" image="line.3.horizontal.decrease.circle" catalog="system" id="Wdp-Ju-bAd">
                             <connections>
                                 <segue destination="FsG-Sh-yxK" kind="presentation" id="dWf-bZ-zZh"/>
@@ -263,11 +263,11 @@
             </objects>
             <point key="canvasLocation" x="2202.290076335878" y="434.50704225352115"/>
         </scene>
-        <!--Item-->
+        <!--Heroes-->
         <scene sceneID="em0-xK-fHm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cN8-3e-pru" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="TxN-Di-gak"/>
+                    <tabBarItem key="tabBarItem" title="Heroes" image="person" catalog="system" selectedImage="person.fill" id="TxN-Di-gak"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HKj-q6-nUV">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -282,11 +282,11 @@
             </objects>
             <point key="canvasLocation" x="1275.5725190839694" y="-355.63380281690144"/>
         </scene>
-        <!--Item-->
+        <!--Locations-->
         <scene sceneID="E3O-jt-5GO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GDa-ph-Juv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="SIk-2Y-zkY"/>
+                    <tabBarItem key="tabBarItem" title="Locations" image="location" catalog="system" selectedImage="location.fill" id="SIk-2Y-zkY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fao-9F-yQa">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -330,11 +330,11 @@
             </objects>
             <point key="canvasLocation" x="2202" y="1242"/>
         </scene>
-        <!--Item-->
+        <!--Episode-->
         <scene sceneID="qyo-ba-NlM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SR9-kY-Fb1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="WC9-20-8ks"/>
+                    <tabBarItem key="tabBarItem" title="Episode" image="film" catalog="system" selectedImage="film.fill" id="WC9-20-8ks"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xHq-ax-Lxp">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -399,7 +399,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="film" catalog="system" width="128" height="93"/>
+        <image name="film.fill" catalog="system" width="128" height="93"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
+        <image name="location" catalog="system" width="128" height="121"/>
+        <image name="location.fill" catalog="system" width="128" height="119"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

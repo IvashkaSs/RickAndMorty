@@ -1,38 +1,60 @@
 import UIKit
 
 class HeroesTableViewController: UITableViewController {
+    var searchController = UISearchController()
+    
     var currentPage = 1
     var totalPages = 1
     var heroes = [Hero]()
     
     var filters: [String: String]?
+    var searchTerm: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        HeroController.shared.fetchHeroes { (result)  in
-            switch result {
-            case .success(let heroResponse):
-                self.updateUI(with: heroResponse)
-            case .failure(let error):
-                self.displayError(error, title: "Failed to Fetch Hero")
+        navigationItem.searchController = searchController
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        
+       fetchHeroes()
+    }
+    
+    func updateUI(with heroResponse: HeroResponse, clearExisting: Bool) {
+        DispatchQueue.main.async {
+            self.totalPages = heroResponse.info.pages
+            
+            if clearExisting {
+                self.heroes = heroResponse.results
+            } else {
+                self.heroes += heroResponse.results
+            }
+            
+            self.tableView.reloadData()
+        }
+    }
+    
+    func fetchHeroes(clearExisting: Bool = true) {
+        var queryItems = ["page": "\(currentPage)"]
+        
+        if let filters = filters {
+            filters.forEach { (key, value) in
+                queryItems[key] = value
             }
         }
-    }
-    
-    func updateUI(with heroResponse: HeroResponse) {
-        DispatchQueue.main.async {
-            self.totalPages = heroResponse.info.pages
-            self.heroes += heroResponse.results
-            self.tableView.reloadData()
+        
+        if let searchTerm = searchTerm {
+            queryItems["name"] = searchTerm
         }
-    }
-    
-    func reloadUI(with heroResponse: HeroResponse) {
-        DispatchQueue.main.async {
-            self.totalPages = heroResponse.info.pages
-            self.heroes = heroResponse.results
-            self.tableView.reloadData()
+        
+        HeroController.shared.fetchHeroes(queryItems: queryItems) { (result) in
+            switch result {
+            case .success(let heroResponse):
+                self.updateUI(with: heroResponse, clearExisting: clearExisting)
+            case .failure(let error):
+                self.displayError(error, title: "Failed to Fetch New Heroes")
+            }
         }
     }
     
@@ -71,41 +93,33 @@ class HeroesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if currentPage < totalPages && indexPath.row == heroes.count - 1 {
             currentPage += 1
-                
-            var queryItems = ["page": "\(currentPage)"]
-            if let filters = filters {
-                filters.forEach { (key, value) in
-                    queryItems[key] = value
-                }
-            }
             
-            HeroController.shared.fetchHeroes(queryItems: queryItems) { (result) in
-                switch result {
-                case .success(let heroResponse):
-                    self.updateUI(with: heroResponse)
-                case .failure(let error):
-                    self.displayError(error, title: "Failed to Fetch New Heroes")
-                }
-            }
+            fetchHeroes(clearExisting: false)
         }
     }
-        
+    
     @IBSegueAction func showFilters(_ coder: NSCoder) -> FiltersTableViewController? {
         return FiltersTableViewController(coder: coder, filters: filters)
     }
     
     @IBAction func unwindToHeroTableViewController (segue: UIStoryboardSegue) {
         if segue.identifier == "applyFiltersSegue", let filters = filters {
-            HeroController.shared.fetchHeroes(queryItems: filters) { (result) in
-                switch result {
-                case .success(let heroResponse):
-                    self.heroes = []
-                    self.filters = filters
-                    self.updateUI(with: heroResponse)
-                case .failure(let error):
-                    self.displayError(error, title: "Failed to Filter Heroes")
-                }
-            }
+            self.filters = filters
+           fetchHeroes()
         }
+    }
+}
+
+extension HeroesTableViewController: UISearchResultsUpdating, UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchString = searchController.searchBar.text, !searchString.isEmpty {
+            searchTerm = searchString
+            fetchHeroes()
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchTerm = nil
+        fetchHeroes()
     }
 }
